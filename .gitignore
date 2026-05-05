@@ -15,7 +15,6 @@ env/
 # 数据文件
 chrome-win64/
 Typora/
-data/
 分析数据/
 data/raw/*.json
 data/summaries/*.md
