@@ -13,6 +13,7 @@ ENV/
 env/
 
 # 数据文件
+Typora/
 data/raw/*.json
 data/summaries/*.md
 data/summaries/*.txt
