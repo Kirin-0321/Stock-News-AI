@@ -1,0 +1,26 @@
+[2025-12-26 16:07:02] ============================================================
+[2025-12-26 16:07:02] 任务流开始: 每日新闻分析流程
+[2025-12-26 16:07:02] 执行模式: 手动执行
+[2025-12-26 16:07:02] ============================================================
+[2025-12-26 16:07:02] Step 1: 开始爬取新闻...
+[2025-12-26 16:07:03]   参数: 滚动36次, 等待6秒, 自动停止=True
+[2025-12-26 16:07:03]   已启用自动停止，数据库最新新闻: 独家｜美的楼宇科技启动调价：原材料成本施压 全系列产品上涨5...
+[2025-12-26 16:07:48] Step 1: ✓ 完成，文件: data\raw\12-26-14——12-26-16.json
+[2025-12-26 16:07:48] Step 2: 开始清洗数据...
+[2025-12-26 16:07:49]   参数: AI=deepseek, 批量=500
+[2025-12-26 16:07:49]   输入: data\raw\12-26-14——12-26-16.json
+[2025-12-26 16:07:49]   清洗执行失败: NewsCleaner.__init__() missing 1 required positional argument: 'criteria'
+[2025-12-26 16:07:49] ============================================================
+[2025-12-26 16:07:49] 任务流失败: NewsCleaner.__init__() missing 1 required positional argument: 'criteria'
+[2025-12-26 16:07:49] 错误类型: TypeError
+[2025-12-26 16:07:49] 堆栈信息:
+Traceback (most recent call last):
+  File "F:\爬虫\workflows\base.py", line 124, in run
+    self.results = self.execute(run_params)
+  File "F:\爬虫\workflows\daily_news_flow.py", line 41, in execute
+    cleaned_file = self._run_cleaner(crawler_file, params.get('cleaner', {}))
+  File "F:\爬虫\workflows\daily_news_flow.py", line 142, in _run_cleaner
+    cleaner = NewsCleaner()
+TypeError: NewsCleaner.__init__() missing 1 required positional argument: 'criteria'
+
+[2025-12-26 16:07:49] ============================================================
