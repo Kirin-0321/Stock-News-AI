@@ -13,7 +13,6 @@ ENV/
 env/
 
 # 数据文件
-chrome-win64/
 data/raw/*.json
 data/summaries/*.md
 data/summaries/*.txt
